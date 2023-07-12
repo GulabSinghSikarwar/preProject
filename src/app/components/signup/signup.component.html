@@ -1,7 +1,58 @@
-<div>
-    <mat-form-field>
-        <mat-label>Enter your email</mat-label>
-        <input matInput placeholder="pat@example.com" [formControl]="email" required>
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-      </mat-form-field>
+<!-- <div class="formContainer">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmitForm()">
+    <div class="formGroup">
+
+      <label for="">email
+
+        <input type="email" formControlName="email">
+      </label>
+    </div>
+    <div class="formGroup">
+
+      <label for="">password
+
+        <input type="password" formControlName="password">
+      </label>
+    </div>
+
+    
+    <div class="formGroup">
+
+     <button type="submit">
+      signup
+      
+     </button>
+    </div>
+
+    
+
+  </form>
+</div>
+ -->
+<div class="container">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmitForm()" class="form-container">
+
+
+
+    <div class="form-row">
+      <div class="form-label">
+        <label>Email</label>
+      </div>
+      <div class="form-input">
+        <input formControlName="email" type="email" placeholder="Enter your email" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-label">
+        <label>password</label>
+      </div>
+      <div class="form-input">
+        <input type="text" formControlName="password" placeholder="Enter your phone number" />
+      </div>
+    </div>
+    <div class="form-row">
+     <button type="submit" > signup</button>
+    </div>
+  </form>
 </div>
